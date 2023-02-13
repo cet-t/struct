@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class struct
+class structs
 {
-    struct User
+    struct Datas
     {
-        public int age;
-        public double height;
+        public (float, float) playerPos;
+        public string stage;
 
-        public User(int _age, double _height)
+        public Datas((float, float) _pos, string _stage)
         {
-            this.age = _age;
-            this.height = _height;
+            this.playerPos = _pos;
+            this.stage = _stage;
         }
     }
 
     public static void Main()
     {
-        User cet = new(18, 175.0);
-        Console.WriteLine($"{cet.age}, {cet.height}");
+        Datas cet = new((123, 456), "Stage1");
+        Console.WriteLine($"{cet.playerPos}, {cet.stage}");
     }
 }
